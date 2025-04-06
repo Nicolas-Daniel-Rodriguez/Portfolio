@@ -261,3 +261,32 @@
   new PureCounter();
 
 })()
+
+document.addEventListener('DOMContentLoaded', function () {
+  const lightbox = GLightbox({
+    selector: '.portfolio-lightbox',
+    onOpen: function (instance) {
+      const slide = instance.getActiveSlide();
+      const linkElement = slide.querySelector('a');
+      const description = linkElement.getAttribute('data-description');
+      if (description) {
+        const descriptionElement = document.createElement('div');
+        descriptionElement.className = 'glightbox-description';
+        descriptionElement.innerHTML = description.replace(/&#10;/g, '<br>');
+        slide.appendChild(descriptionElement);
+      }
+    }
+  });
+});
+
+document.addEventListener('DOMContentLoaded', function () {
+  const downloadBtn = document.querySelector('.btn-primary');
+  if (downloadBtn) {
+    downloadBtn.addEventListener('click', function (event) {
+      // Ensure the default action is prevented
+      event.preventDefault();
+      // Trigger the download
+      window.location.href = downloadBtn.getAttribute('href');
+    });
+  }
+});
