@@ -1,11 +1,3 @@
-/**
-* Template Name: MyResume
-* Updated: Mar 10 2023 with Bootstrap v5.2.3
-* Template URL: https://bootstrapmade.com/free-html-bootstrap-template-my-resume/
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
-
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
@@ -1227,4 +1219,33 @@ section {
 
 #footer .credits {
   font-size: 13px;
+}
+
+.skill-item {
+  padding: 20px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  height: 100%;
+}
+
+.skill-item:hover {
+  transform: translateY(-5px);
+}
+
+.skill-item h4 {
+  margin: 15px 0 5px;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.skill-item p {
+  font-size: 14px;
+  color: #6c757d;
+}
+
+#show-more-btn {
+  padding: 10px 25px;
+  margin-top: 20px;
 }
